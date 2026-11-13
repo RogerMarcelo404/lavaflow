@@ -1,0 +1,26 @@
+sequenceDiagram
+    actor At as Atendente
+    actor Fu as Funcionário
+    participant S as Sistema
+    participant BD as Banco de Dados
+
+    At->>S: Abre OS (veículo + serviços + funcionário)
+    S->>BD: Busca preço dos serviços pelo porte
+    BD-->>S: Preços
+    S->>BD: Verifica se o veículo tem pacote válido
+    BD-->>S: Resultado
+    alt Pacote válido
+        S->>BD: Desconta 1 uso do pacote
+    end
+    S->>BD: Salva OS e itens (status AGUARDANDO)
+    S-->>At: OS adicionada à fila do dia
+
+    Fu->>S: Inicia o serviço
+    S->>BD: Status EM ANDAMENTO
+    Fu->>S: Finaliza o serviço
+    S->>BD: Status FINALIZADO
+
+    At->>S: Registra pagamento (forma e valor)
+    S->>BD: Salva pagamento
+    S->>BD: Status PAGO e grava comissão
+    S-->>At: Atendimento concluído
