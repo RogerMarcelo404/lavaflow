@@ -1,0 +1,76 @@
+classDiagram
+    class Usuario {
+        +String nome
+        +String email
+        +String perfil
+        +Decimal percentualComissao
+    }
+    class Cliente {
+        +String nome
+        +String telefone
+        +String cpf
+    }
+    class Veiculo {
+        +String placa
+        +String modelo
+        +String porte
+    }
+    class Servico {
+        +String nome
+        +String descricao
+        +buscarPreco(porte) Decimal
+    }
+    class PrecoServico {
+        +String porte
+        +Decimal valor
+    }
+    class Agendamento {
+        +Date data
+        +String turno
+        +String status
+        +turnoTemVaga() bool
+    }
+    class OrdemServico {
+        +Date data
+        +String status
+        +Decimal valorTotal
+        +Decimal valorComissao
+        +calcularTotal()
+        +calcularComissao()
+    }
+    class ItemOrdem {
+        +Decimal preco
+    }
+    class Assinatura {
+        +int totalUsos
+        +int usosRestantes
+        +Decimal valorMensal
+        +Date dataVencimento
+        +estaValida() bool
+        +descontarUso()
+    }
+    class Pagamento {
+        +String forma
+        +Decimal valor
+        +DateTime data
+    }
+    class Caixa {
+        +Date data
+        +Decimal totalCalculado
+        +Decimal valorInformado
+        +calcularDiferenca() Decimal
+    }
+
+    Cliente "1" --> "0..*" Veiculo : possui
+    Veiculo "1" --> "0..*" Agendamento : tem
+    Veiculo "1" --> "0..*" OrdemServico : recebe
+    Usuario "1" --> "0..*" OrdemServico : executa
+    OrdemServico "1" *-- "1..*" ItemOrdem : contém
+    Servico "1" --> "0..*" ItemOrdem
+    Servico "1" *-- "1..3" PrecoServico : tem
+    Veiculo "1" --> "0..*" Assinatura : possui
+    Servico "1" --> "0..*" Assinatura : incluído em
+    Assinatura "0..1" --> "0..*" OrdemServico : cobre
+    OrdemServico "1" --> "0..*" Pagamento
+    Assinatura "1" --> "0..*" Pagamento
+    Usuario "1" --> "0..*" Caixa : fecha
