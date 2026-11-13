@@ -1,0 +1,42 @@
+@startuml
+left to right direction
+
+actor "Funcionário" as Fu
+actor "Atendente" as At
+actor "Administrador" as Adm
+
+At <|-- Adm
+
+rectangle "Sistema LavaFlow" {
+  usecase "Fazer login" as UC1
+  usecase "Consultar fila e\natualizar status" as UC2
+  usecase "Cadastrar clientes\ne veículos" as UC3
+  usecase "Agendar atendimento" as UC4
+  usecase "Abrir ordem de serviço" as UC5
+  usecase "Calcular preço\npelo porte" as UC6
+  usecase "Registrar pagamento" as UC7
+  usecase "Vender pacote mensal" as UC8
+  usecase "Fechar caixa" as UC9
+  usecase "Cadastrar serviços\ne preços" as UC10
+  usecase "Cadastrar funcionários" as UC11
+  usecase "Ver relatórios" as UC12
+}
+
+Fu --> UC1
+Fu --> UC2
+
+At --> UC1
+At --> UC2
+At --> UC3
+At --> UC4
+At --> UC5
+At --> UC7
+At --> UC8
+At --> UC9
+
+Adm --> UC10
+Adm --> UC11
+Adm --> UC12
+
+UC5 ..> UC6 : <<include>>
+@enduml
