@@ -1,0 +1,20 @@
+flowchart TD
+    A([Início]) --> B{Cliente já cadastrado?}
+    B -- Não --> C[Cadastrar cliente e veículo]
+    B -- Sim --> D[Selecionar veículo]
+    C --> D
+    D --> E[Escolher serviços e funcionário]
+    E --> F[Sistema calcula o preço pelo porte]
+    F --> G{Possui pacote válido?}
+    G -- Sim --> H[Desconta 1 uso do pacote]
+    G -- Não --> I[Cobrança normal]
+    H --> J[OS entra na fila: AGUARDANDO]
+    I --> J
+    J --> K[Funcionário executa: EM ANDAMENTO]
+    K --> L[Serviço concluído: FINALIZADO]
+    L --> M{Há valor a pagar?}
+    M -- Sim --> N[Registrar pagamento]
+    M -- Não --> O[OS marcada como PAGO]
+    N --> O
+    O --> P[Sistema calcula a comissão]
+    P --> Q([Fim])
