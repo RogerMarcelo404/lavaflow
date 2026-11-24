@@ -5,6 +5,8 @@ Sistema web para gestão de lava-jatos e estéticas automotivas, desenvolvido no
 Organiza o atendimento do agendamento ao pagamento, com cálculo automático do preço pelo porte do veículo e da comissão dos funcionários, controle de pacotes mensais e fechamento de caixa.
 
 **Integrantes:** Roger Marcelo, Rudjery Grando, Arthur Nicolli e Pedro Missel
+
+
 **Professor:** Caio Vinicio Koch
 
 ## Tecnologias
