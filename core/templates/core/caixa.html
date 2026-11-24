@@ -1,0 +1,89 @@
+{% extends "core/base.html" %}
+{% block titulo %}Caixa{% endblock %}
+
+{% block conteudo %}
+<div class="d-flex flex-wrap align-items-center gap-2 mb-4">
+    <h1 class="h3 mb-0 me-auto">Caixa do dia</h1>
+    <input type="date" id="data" class="form-control" style="max-width: 170px;" aria-label="Data do caixa">
+</div>
+
+<div class="row g-3 mb-4" id="formas"></div>
+
+<div class="row g-4">
+    <div class="col-md-6">
+        <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+                <h2 class="h6 text-uppercase text-secondary">Total calculado pelo sistema</h2>
+                <p class="display-6 fw-bold mb-1" id="total">R$ 0,00</p>
+                <p class="text-secondary mb-0" id="quantidade"></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card border-0 shadow-sm h-100">
+            <div class="card-body" id="areaFechamento"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+const campoData = document.getElementById("data");
+const USUARIO_ID = Number("{{ usuario.id }}");
+
+function formularioFechamento() {
+    return `<h2 class="h6 text-uppercase text-secondary">Fechar caixa</h2>
+        <form id="formFechar">
+            <label for="valorInformado" class="form-label">Valor contado (R$)</label>
+            <input type="number" step="0.01" min="0" class="form-control mb-3" id="valorInformado" required>
+            <button class="btn btn-lf w-100" type="submit"><i class="bi bi-lock"></i> Fechar caixa</button>
+        </form>`;
+}
+
+function resultadoFechamento(f) {
+    const dif = Number(f.diferenca);
+    const cor = dif === 0 ? "success" : (dif < 0 ? "danger" : "warning");
+    return `<h2 class="h6 text-uppercase text-secondary">Caixa fechado</h2>
+        <p class="mb-1">Responsável: <strong>${LF.esc(f.responsavel)}</strong></p>
+        <p class="mb-1">Valor contado: <strong>${LF.moeda(f.valor_informado)}</strong></p>
+        <p class="mb-0">Diferença: <span class="badge text-bg-${cor} fs-6">${LF.moeda(dif)}</span></p>`;
+}
+
+async function carregar() {
+    try {
+        const c = await LF.api("GET", `/api/caixa/?data=${campoData.value}`);
+        document.getElementById("formas").innerHTML = Object.entries(c.por_forma).map(([forma, valor]) => `
+            <div class="col-sm-4"><div class="card border-0 shadow-sm"><div class="card-body">
+                <div class="text-secondary small">${LF.FORMAS[forma]}</div>
+                <div class="fs-4 fw-semibold">${LF.moeda(valor)}</div>
+            </div></div></div>`).join("");
+        document.getElementById("total").textContent = LF.moeda(c.total_calculado);
+        document.getElementById("quantidade").textContent = `${c.quantidade_pagamentos} pagamento(s) registrado(s)`;
+        document.getElementById("areaFechamento").innerHTML = c.fechado
+            ? resultadoFechamento(c.fechamento) : formularioFechamento();
+    } catch (e) {
+        LF.aviso(e.message, "danger");
+    }
+}
+
+document.getElementById("areaFechamento").addEventListener("submit", async (evento) => {
+    evento.preventDefault();
+    try {
+        await LF.api("POST", "/api/caixa/fechar/", {
+            usuario_id: USUARIO_ID,
+            data: campoData.value,
+            valor_informado: document.getElementById("valorInformado").value,
+        });
+        LF.aviso("Caixa fechado.");
+        carregar();
+    } catch (e) {
+        LF.aviso(e.message, "danger");
+    }
+});
+
+campoData.value = LF.hoje();
+campoData.addEventListener("change", carregar);
+carregar();
+</script>
+{% endblock %}

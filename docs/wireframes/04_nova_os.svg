@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800">
+<rect width="1280" height="800" fill="#f2f2f2"/>
+<rect x="0" y="0" width="1280" height="60" rx="0" fill="#4a4a4a" stroke="#4a4a4a" stroke-width="1"/>
+<circle cx="36" cy="30" r="12" fill="#ffffff" stroke="#ffffff"/>
+<text x="56" y="36" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="start">LavaFlow</text>
+<text x="200" y="36" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" fill="#ffffff" text-anchor="start">Fila do dia</text>
+<text x="316" y="36" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="start">Nova OS</text>
+<line x1="316" y1="46" x2="376" y2="46" stroke="#ffffff" stroke-width="2"/>
+<text x="416" y="36" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" fill="#ffffff" text-anchor="start">Clientes</text>
+<text x="518" y="36" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" fill="#ffffff" text-anchor="start">Caixa</text>
+<text x="1170" y="36" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#ffffff" text-anchor="end">Ana (Atendente)</text>
+<rect x="1190" y="17" width="64" height="26" rx="5" fill="#4a4a4a" stroke="#ffffff" stroke-width="1"/>
+<text x="1222" y="35" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#ffffff" text-anchor="middle">Sair</text>
+<text x="40" y="108" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="bold" fill="#333333" text-anchor="start">Nova ordem de serviço</text>
+<rect x="40" y="130" width="800" height="180" rx="10" fill="#ffffff" stroke="#b5b5b5" stroke-width="1"/>
+<text x="60" y="160" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#808080" text-anchor="start">1. VEÍCULO</text>
+<rect x="60" y="175" width="600" height="38" rx="5" fill="#ffffff" stroke="#b5b5b5" stroke-width="1"/>
+<text x="72" y="199.0" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#808080" text-anchor="start">ABC1D23</text>
+<rect x="670" y="175" width="150" height="38" rx="6" fill="#4a4a4a" stroke="#4a4a4a" stroke-width="1"/>
+<text x="745.0" y="198.9" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Buscar</text>
+<rect x="60" y="228" width="760" height="66" rx="6" fill="#e2e2e2" stroke="#b5b5b5" stroke-width="1"/>
+<text x="76" y="256" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="#333333" text-anchor="start">ABC1D23</text>
+<text x="170" y="256" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" fill="#333333" text-anchor="start">Chevrolet Onix</text>
+<rect x="300" y="241" width="93" height="22" rx="11" fill="#e2e2e2" stroke="#b5b5b5" stroke-width="1"/>
+<text x="346.5" y="256" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#333333" text-anchor="middle">Porte Médio</text>
+<text x="76" y="281" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#808080" text-anchor="start">João Silva  ·  Pacote: Lavagem simples, restam 2 usos, vence em 07/12/2026</text>
+<rect x="40" y="325" width="800" height="260" rx="10" fill="#ffffff" stroke="#b5b5b5" stroke-width="1"/>
+<text x="60" y="355" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#808080" text-anchor="start">2. SERVIÇOS (preço do porte médio)</text>
+<rect x="60" y="372" width="375" height="54" rx="6" fill="#ececec" stroke="#4a4a4a" stroke-width="1"/>
+<rect x="76" y="391" width="16" height="16" rx="3" fill="#4a4a4a" stroke="#4a4a4a" stroke-width="1"/>
+<path d="M79 399 l4 4 l6 -8" stroke="#fff" stroke-width="2" fill="none"/>
+<text x="104" y="404" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#333333" text-anchor="start">Lavagem simples</text>
+<rect x="355" y="388" width="58" height="22" rx="11" fill="#e2e2e2" stroke="#b5b5b5" stroke-width="1"/>
+<text x="384.0" y="403" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#333333" text-anchor="middle">Pacote</text>
+<rect x="445" y="372" width="375" height="54" rx="6" fill="#ffffff" stroke="#b5b5b5" stroke-width="1"/>
+<rect x="461" y="391" width="16" height="16" rx="3" fill="#ffffff" stroke="#4a4a4a" stroke-width="1"/>
+<text x="489" y="404" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#333333" text-anchor="start">Lavagem completa</text>
+<text x="804" y="404" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#333333" text-anchor="end">R$ 65,00</text>
+<rect x="60" y="438" width="375" height="54" rx="6" fill="#ececec" stroke="#4a4a4a" stroke-width="1"/>
+<rect x="76" y="457" width="16" height="16" rx="3" fill="#4a4a4a" stroke="#4a4a4a" stroke-width="1"/>
+<path d="M79 465 l4 4 l6 -8" stroke="#fff" stroke-width="2" fill="none"/>
+<text x="104" y="470" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#333333" text-anchor="start">Cera</text>
+<text x="419" y="470" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#333333" text-anchor="end">R$ 40,00</text>
+<rect x="445" y="438" width="375" height="54" rx="6" fill="#ffffff" stroke="#b5b5b5" stroke-width="1"/>
+<rect x="461" y="457" width="16" height="16" rx="3" fill="#ffffff" stroke="#4a4a4a" stroke-width="1"/>
+<text x="489" y="470" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#333333" text-anchor="start">Higienização interna</text>
+<text x="804" y="470" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#333333" text-anchor="end">R$ 180,00</text>
+<rect x="60" y="504" width="375" height="54" rx="6" fill="#ffffff" stroke="#b5b5b5" stroke-width="1"/>
+<rect x="76" y="523" width="16" height="16" rx="3" fill="#ffffff" stroke="#4a4a4a" stroke-width="1"/>
+<text x="104" y="536" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#333333" text-anchor="start">Polimento</text>
+<text x="419" y="536" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#333333" text-anchor="end">R$ 220,00</text>
+<rect x="40" y="600" width="800" height="110" rx="10" fill="#ffffff" stroke="#b5b5b5" stroke-width="1"/>
+<text x="60" y="630" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#808080" text-anchor="start">3. FUNCIONÁRIO RESPONSÁVEL</text>
+<rect x="60" y="645" width="760" height="38" rx="5" fill="#ffffff" stroke="#b5b5b5" stroke-width="1"/>
+<text x="72" y="669.0" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#808080" text-anchor="start">Pedro Henrique Alves (30%)</text>
+<path d="M794 661.0 l6 6 l6 -6" stroke="#808080" stroke-width="2" fill="none"/>
+<rect x="870" y="130" width="370" height="300" rx="10" fill="#ffffff" stroke="#b5b5b5" stroke-width="1"/>
+<text x="890" y="160" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#808080" text-anchor="start">RESUMO</text>
+<text x="890" y="195" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#333333" text-anchor="start">Lavagem simples</text>
+<text x="1220" y="195" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#333333" text-anchor="end">Pacote</text>
+<text x="890" y="225" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#333333" text-anchor="start">Cera</text>
+<text x="1220" y="225" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#333333" text-anchor="end">R$ 40,00</text>
+<line x1="890" y1="320" x2="1220" y2="320" stroke="#b5b5b5" stroke-width="1"/>
+<text x="890" y="352" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#333333" text-anchor="start">Total</text>
+<text x="1220" y="352" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="bold" fill="#333333" text-anchor="end">R$ 40,00</text>
+<rect x="890" y="372" width="330" height="42" rx="6" fill="#4a4a4a" stroke="#4a4a4a" stroke-width="1"/>
+<text x="1055.0" y="397.9" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Abrir OS</text>
+</svg>

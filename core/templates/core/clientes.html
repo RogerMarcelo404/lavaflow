@@ -1,0 +1,117 @@
+{% extends "core/base.html" %}
+{% block titulo %}Clientes{% endblock %}
+
+{% block conteudo %}
+<h1 class="h3 mb-4">Clientes e veículos</h1>
+
+<div class="row g-4">
+    <div class="col-lg-7">
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <input type="search" id="busca" class="form-control mb-3" placeholder="Buscar por nome, telefone ou placa">
+                <div class="table-responsive">
+                    <table class="table align-middle mb-0">
+                        <thead><tr><th>Cliente</th><th>Telefone</th><th>Veículos</th></tr></thead>
+                        <tbody id="lista"><tr><td colspan="3" class="text-secondary">Carregando...</td></tr></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-5">
+        <form class="card border-0 shadow-sm" id="formCliente" novalidate>
+            <div class="card-body">
+                <h2 class="h5 mb-3">Novo cliente</h2>
+                <div class="mb-2">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input class="form-control" id="nome" required maxlength="100">
+                </div>
+                <div class="row g-2 mb-3">
+                    <div class="col-sm-6">
+                        <label for="telefone" class="form-label">Telefone</label>
+                        <input class="form-control" id="telefone" placeholder="(11) 99999-9999" required>
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="cpf" class="form-label">CPF <span class="text-secondary">(opcional)</span></label>
+                        <input class="form-control" id="cpf" placeholder="000.000.000-00">
+                    </div>
+                </div>
+
+                <h3 class="h6 text-uppercase text-secondary border-top pt-3">Veículo</h3>
+                <div class="row g-2">
+                    <div class="col-sm-4">
+                        <label for="placa" class="form-label">Placa</label>
+                        <input class="form-control text-uppercase" id="placa" maxlength="8" required>
+                    </div>
+                    <div class="col-sm-8">
+                        <label for="modelo" class="form-label">Modelo</label>
+                        <input class="form-control" id="modelo" maxlength="60" required>
+                    </div>
+                    <div class="col-12">
+                        <label for="porte" class="form-label">Porte</label>
+                        <select class="form-select" id="porte">
+                            <option value="PEQUENO">Pequeno (hatch, compacto)</option>
+                            <option value="MEDIO" selected>Médio (sedã)</option>
+                            <option value="GRANDE">Grande (SUV, caminhonete)</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-lf w-100 mt-3"><i class="bi bi-save"></i> Salvar</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+const campoBusca = document.getElementById("busca");
+let espera = null;
+
+async function carregar() {
+    try {
+        const lista = await LF.api("GET", `/api/clientes/?busca=${encodeURIComponent(campoBusca.value)}`);
+        document.getElementById("lista").innerHTML = lista.length ? lista.map(c => `<tr>
+            <td>${LF.esc(c.nome)}${c.cpf ? `<div class="small text-secondary">${LF.esc(c.cpf)}</div>` : ""}</td>
+            <td>${LF.esc(c.telefone)}</td>
+            <td>${c.veiculos.map(v => `<span class="badge text-bg-light border me-1" title="${LF.esc(v.modelo)}">
+                <span class="lf-placa">${LF.esc(v.placa)}</span> · ${LF.PORTE[v.porte]}</span>`).join("") || "-"}</td>
+        </tr>`).join("") : '<tr><td colspan="3" class="text-secondary">Nenhum cliente encontrado.</td></tr>';
+    } catch (e) {
+        LF.aviso(e.message, "danger");
+    }
+}
+
+campoBusca.addEventListener("input", () => {
+    clearTimeout(espera);
+    espera = setTimeout(carregar, 300);
+});
+
+document.getElementById("formCliente").addEventListener("submit", async (evento) => {
+    evento.preventDefault();
+    const valor = id => document.getElementById(id).value;
+    let cliente;
+    try {
+        cliente = await LF.api("POST", "/api/clientes/", {
+            nome: valor("nome"), telefone: valor("telefone"), cpf: valor("cpf"),
+        });
+    } catch (e) {
+        LF.aviso(e.message, "danger");
+        return;
+    }
+    try {
+        await LF.api("POST", "/api/veiculos/", {
+            cliente_id: cliente.id, placa: valor("placa"), modelo: valor("modelo"), porte: valor("porte"),
+        });
+        LF.aviso("Cliente e veículo cadastrados.");
+        evento.target.reset();
+    } catch (e) {
+        LF.aviso(`Cliente salvo, mas o veículo não: ${e.message}`, "warning");
+    }
+    carregar();
+});
+
+carregar();
+</script>
+{% endblock %}

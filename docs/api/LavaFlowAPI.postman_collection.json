@@ -1,0 +1,242 @@
+{
+  "info": {
+    "_postman_id": "63f3946f-1be3-48c9-a650-c5b5a368b12b",
+    "name": "LavaFlowAPI",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "60343765",
+    "_collection_link": "https://go.postman.co/collection/60343765-63f3946f-1be3-48c9-a650-c5b5a368b12b?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Listar Clientes",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/clientes/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "clientes",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Cadastrar cliente inválido",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"nome\": \"\", \"telefone\": \"123\", \"cpf\": \"111.111.111-11\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/clientes/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "clientes",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Status inválido",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"status\": \"AGUARDANDO\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/ordens/5/status/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "ordens",
+            "5",
+            "status",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Pagamentos",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"ordem_id\": 7, \"forma\": \"PIX\", \"valor\": 35.00}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/pagamentos/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "pagamentos",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Cadastrar Cliente",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"nome\": \"Bruno Almeida\", \"telefone\": \"11966665555\", \"cpf\": \"987.654.321-00\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/clientes/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "clientes",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Serviços por porte",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/servicos/?porte=MEDIO",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "servicos",
+            ""
+          ],
+          "query": [
+            {
+              "key": "porte",
+              "value": "MEDIO"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Abrir OS",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"veiculo_id\": 6, \"funcionario_id\": 4, \"servicos\": [2, 3]}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/ordens/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "ordens",
+            ""
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{% extends "core/base.html" %}
+{% block titulo %}Nova ordem de serviço{% endblock %}
+
+{% block conteudo %}
+<h1 class="h3 mb-4">Nova ordem de serviço</h1>
+
+<div class="row g-4">
+    <div class="col-lg-8">
+        <!-- 1. Veículo -->
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-body">
+                <h2 class="h6 text-uppercase text-secondary">1. Veículo</h2>
+                <form class="input-group" id="formPlaca">
+                    <input type="text" class="form-control text-uppercase" id="placa" placeholder="Digite a placa (ex.: ABC1D23)" maxlength="8" required>
+                    <button class="btn btn-lf" type="submit"><i class="bi bi-search"></i> Buscar</button>
+                </form>
+                <div id="veiculo" class="mt-3"></div>
+            </div>
+        </div>
+
+        <!-- 2. Serviços -->
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-body">
+                <h2 class="h6 text-uppercase text-secondary">2. Serviços</h2>
+                <div id="servicos" class="row g-2">
+                    <p class="text-secondary mb-0">Busque um veículo para ver os preços do porte dele.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Funcionário -->
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <h2 class="h6 text-uppercase text-secondary">3. Funcionário responsável</h2>
+                <select id="funcionario" class="form-select" aria-label="Funcionário responsável"></select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resumo -->
+    <div class="col-lg-4">
+        <div class="card border-0 shadow-sm lf-resumo">
+            <div class="card-body">
+                <h2 class="h6 text-uppercase text-secondary">Resumo</h2>
+                <ul class="list-unstyled mb-3" id="resumoItens"><li class="text-secondary">Nenhum serviço selecionado.</li></ul>
+                <div class="d-flex justify-content-between border-top pt-3 mb-3">
+                    <span class="fw-semibold">Total</span>
+                    <span class="fw-bold fs-5" id="total">R$ 0,00</span>
+                </div>
+                <button class="btn btn-lf w-100" id="abrir" disabled><i class="bi bi-check2-circle"></i> Abrir OS</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+let veiculoAtual = null;
+let servicosDoPorte = [];
+
+async function carregarFuncionarios() {
+    const lista = await LF.api("GET", "/api/funcionarios/");
+    document.getElementById("funcionario").innerHTML = lista
+        .map(f => `<option value="${f.id}">${LF.esc(f.nome)} (${Number(f.percentual_comissao)}%)</option>`).join("");
+}
+
+document.getElementById("formPlaca").addEventListener("submit", async (evento) => {
+    evento.preventDefault();
+    const placa = document.getElementById("placa").value.replace(/[\s-]/g, "").toUpperCase();
+    const area = document.getElementById("veiculo");
+    try {
+        const lista = await LF.api("GET", `/api/veiculos/?placa=${encodeURIComponent(placa)}`);
+        veiculoAtual = lista.find(v => v.placa === placa) || null;
+        if (!veiculoAtual) {
+            area.innerHTML = `<div class="alert alert-warning mb-0">Veículo não encontrado.
+                <a href="{% url 'clientes' %}">Cadastrar cliente e veículo</a></div>`;
+            limparServicos();
+            return;
+        }
+        const pacote = veiculoAtual.pacote_valido;
+        area.innerHTML = `<div class="border rounded p-3 bg-light">
+            <span class="lf-placa fs-5">${LF.esc(veiculoAtual.placa)}</span>
+            <span class="ms-2">${LF.esc(veiculoAtual.modelo)}</span>
+            <span class="badge text-bg-secondary ms-2">Porte ${LF.PORTE[veiculoAtual.porte]}</span>
+            <div class="small mt-1"><i class="bi bi-person"></i> ${LF.esc(veiculoAtual.cliente.nome)}</div>
+            ${pacote ? `<div class="small mt-1 text-info-emphasis"><i class="bi bi-box-seam"></i>
+                Pacote: ${LF.esc(pacote.servico.nome)}, restam ${pacote.usos_restantes} uso(s), vence em ${new Date(pacote.data_vencimento + "T00:00").toLocaleDateString("pt-BR")}</div>` : ""}
+        </div>`;
+        await carregarServicos();
+    } catch (e) {
+        LF.aviso(e.message, "danger");
+    }
+});
+
+function limparServicos() {
+    servicosDoPorte = [];
+    document.getElementById("servicos").innerHTML = '<p class="text-secondary mb-0">Busque um veículo para ver os preços do porte dele.</p>';
+    atualizarResumo();
+}
+
+async function carregarServicos() {
+    servicosDoPorte = await LF.api("GET", `/api/servicos/?porte=${veiculoAtual.porte}`);
+    const pacote = veiculoAtual.pacote_valido;
+    document.getElementById("servicos").innerHTML = servicosDoPorte.map(s => {
+        const coberto = pacote && pacote.servico.id === s.id;
+        return `<div class="col-sm-6">
+            <label class="lf-servico border rounded p-3 d-flex align-items-center gap-2 h-100">
+                <input class="form-check-input mt-0" type="checkbox" value="${s.id}">
+                <span class="me-auto">${LF.esc(s.nome)}</span>
+                ${coberto ? '<span class="badge text-bg-info">Pacote</span>' : `<strong>${LF.moeda(s.preco)}</strong>`}
+            </label></div>`;
+    }).join("");
+    atualizarResumo();
+}
+
+function selecionados() {
+    return [...document.querySelectorAll("#servicos input:checked")].map(i => Number(i.value));
+}
+
+function atualizarResumo() {
+    const ids = selecionados();
+    const pacote = veiculoAtual && veiculoAtual.pacote_valido;
+    let total = 0;
+    let usouPacote = false;
+    const linhas = ids.map(id => {
+        const s = servicosDoPorte.find(x => x.id === id);
+        let preco = Number(s.preco);
+        if (pacote && !usouPacote && pacote.servico.id === id) { preco = 0; usouPacote = true; }
+        total += preco;
+        return `<li class="d-flex justify-content-between"><span>${LF.esc(s.nome)}</span><span>${preco === 0 ? "Pacote" : LF.moeda(preco)}</span></li>`;
+    });
+    document.getElementById("resumoItens").innerHTML = linhas.length ? linhas.join("") : '<li class="text-secondary">Nenhum serviço selecionado.</li>';
+    document.getElementById("total").textContent = LF.moeda(total);
+    document.getElementById("abrir").disabled = !(veiculoAtual && ids.length);
+}
+
+document.getElementById("servicos").addEventListener("change", atualizarResumo);
+
+document.getElementById("abrir").addEventListener("click", async (evento) => {
+    evento.target.disabled = true;
+    try {
+        const os = await LF.api("POST", "/api/ordens/", {
+            veiculo_id: veiculoAtual.id,
+            funcionario_id: Number(document.getElementById("funcionario").value),
+            servicos: selecionados(),
+        });
+        LF.aviso(`OS #${os.id} aberta e adicionada à fila.`);
+        setTimeout(() => (window.location.href = "{% url 'fila' %}"), 1200);
+    } catch (e) {
+        LF.aviso(e.message, "danger");
+        evento.target.disabled = false;
+    }
+});
+
+carregarFuncionarios().catch(e => LF.aviso(e.message, "danger"));
+</script>
+{% endblock %}

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="844" viewBox="0 0 390 844">
+<rect width="390" height="844" fill="#f2f2f2"/>
+<rect x="0" y="0" width="390" height="56" rx="0" fill="#4a4a4a" stroke="#4a4a4a" stroke-width="1"/>
+<circle cx="28" cy="28" r="10" fill="#ffffff" stroke="#ffffff"/>
+<text x="46" y="34" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="start">LavaFlow</text>
+<rect x="340" y="19" width="26" height="3" rx="1" fill="#ffffff" stroke="#ffffff" stroke-width="1"/>
+<rect x="340" y="26" width="26" height="3" rx="1" fill="#ffffff" stroke="#ffffff" stroke-width="1"/>
+<rect x="340" y="33" width="26" height="3" rx="1" fill="#ffffff" stroke="#ffffff" stroke-width="1"/>
+<text x="20" y="96" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="bold" fill="#333333" text-anchor="start">Fila do dia</text>
+<rect x="20" y="112" width="350" height="38" rx="5" fill="#ffffff" stroke="#b5b5b5" stroke-width="1"/>
+<text x="32" y="136.0" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#808080" text-anchor="start">17/11/2026</text>
+<rect x="16" y="166" width="358" height="40" rx="10" fill="#e2e2e2" stroke="#e2e2e2" stroke-width="1"/>
+<text x="30" y="192" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#333333" text-anchor="start">AGUARDANDO</text>
+<rect x="130" y="175" width="23" height="22" rx="11" fill="#4a4a4a" stroke="#4a4a4a" stroke-width="1"/>
+<text x="141.5" y="190" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+<rect x="20" y="216" width="350" height="150" rx="8" fill="#ffffff" stroke="#b5b5b5" stroke-width="1"/>
+<rect x="20" y="216" width="5" height="150" rx="2" fill="#4a4a4a" stroke="#4a4a4a" stroke-width="1"/>
+<text x="36" y="242" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#333333" text-anchor="start">ABC1D23</text>
+<text x="358" y="242" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#808080" text-anchor="end">OS #4</text>
+<text x="36" y="262" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#808080" text-anchor="start">Chevrolet Onix · Médio</text>
+<text x="36" y="282" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#333333" text-anchor="start">João Silva</text>
+<text x="36" y="301" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#808080" text-anchor="start">Lavagem simples</text>
+<text x="36" y="322" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#808080" text-anchor="start">Pedro</text>
+<rect x="294" y="308" width="58" height="22" rx="11" fill="#e2e2e2" stroke="#b5b5b5" stroke-width="1"/>
+<text x="323.0" y="323" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#333333" text-anchor="middle">Pacote</text>
+<rect x="32" y="332" width="326" height="26" rx="6" fill="#ffffff" stroke="#4a4a4a" stroke-width="1"/>
+<text x="195.0" y="349.2" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#4a4a4a" text-anchor="middle">Iniciar</text>
+<rect x="20" y="376" width="350" height="150" rx="8" fill="#ffffff" stroke="#b5b5b5" stroke-width="1"/>
+<rect x="20" y="376" width="5" height="150" rx="2" fill="#4a4a4a" stroke="#4a4a4a" stroke-width="1"/>
+<text x="36" y="402" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#333333" text-anchor="start">BNM5K67</text>
+<text x="358" y="402" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#808080" text-anchor="end">OS #5</text>
+<text x="36" y="422" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#808080" text-anchor="start">Renault Kwid · Pequeno</text>
+<text x="36" y="442" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#333333" text-anchor="start">Fernanda Costa</text>
+<text x="36" y="461" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#808080" text-anchor="start">Lavagem completa</text>
+<text x="36" y="482" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#808080" text-anchor="start">Pedro</text>
+<text x="358" y="484" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="end">R$ 50,00</text>
+<rect x="32" y="492" width="326" height="26" rx="6" fill="#ffffff" stroke="#4a4a4a" stroke-width="1"/>
+<text x="195.0" y="509.2" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#4a4a4a" text-anchor="middle">Iniciar</text>
+<rect x="16" y="540" width="358" height="40" rx="10" fill="#e2e2e2" stroke="#e2e2e2" stroke-width="1"/>
+<text x="30" y="566" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#333333" text-anchor="start">EM ANDAMENTO</text>
+<rect x="146" y="549" width="23" height="22" rx="11" fill="#4a4a4a" stroke="#4a4a4a" stroke-width="1"/>
+<text x="157.5" y="564" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="20" y="590" width="350" height="150" rx="8" fill="#ffffff" stroke="#b5b5b5" stroke-width="1"/>
+<rect x="20" y="590" width="5" height="150" rx="2" fill="#4a4a4a" stroke="#4a4a4a" stroke-width="1"/>
+<text x="36" y="616" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#333333" text-anchor="start">ZXC4V56</text>
+<text x="358" y="616" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#808080" text-anchor="end">OS #6</text>
+<text x="36" y="636" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#808080" text-anchor="start">Jeep Compass · Grande</text>
+<text x="36" y="656" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#333333" text-anchor="start">Fernanda Costa</text>
+<text x="36" y="675" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#808080" text-anchor="start">Higienização interna</text>
+<text x="36" y="696" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#808080" text-anchor="start">Lucas</text>
+<text x="358" y="698" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="end">R$ 230,00</text>
+<rect x="32" y="706" width="326" height="26" rx="6" fill="#ffffff" stroke="#4a4a4a" stroke-width="1"/>
+<text x="195.0" y="723.2" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#4a4a4a" text-anchor="middle">Finalizar</text>
+<text x="195" y="832" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#808080" text-anchor="middle">As colunas ficam empilhadas no celular</text>
+</svg>

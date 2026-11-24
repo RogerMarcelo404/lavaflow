@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800">
+<rect width="1280" height="800" fill="#f2f2f2"/>
+<rect x="0" y="0" width="1280" height="60" rx="0" fill="#4a4a4a" stroke="#4a4a4a" stroke-width="1"/>
+<circle cx="36" cy="30" r="12" fill="#ffffff" stroke="#ffffff"/>
+<text x="56" y="36" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="start">LavaFlow</text>
+<text x="200" y="36" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" fill="#ffffff" text-anchor="start">Fila do dia</text>
+<text x="316" y="36" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" fill="#ffffff" text-anchor="start">Nova OS</text>
+<text x="416" y="36" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="start">Clientes</text>
+<line x1="416" y1="46" x2="478" y2="46" stroke="#ffffff" stroke-width="2"/>
+<text x="518" y="36" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" fill="#ffffff" text-anchor="start">Caixa</text>
+<text x="1170" y="36" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#ffffff" text-anchor="end">Ana (Atendente)</text>
+<rect x="1190" y="17" width="64" height="26" rx="5" fill="#4a4a4a" stroke="#ffffff" stroke-width="1"/>
+<text x="1222" y="35" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#ffffff" text-anchor="middle">Sair</text>
+<text x="40" y="108" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="bold" fill="#333333" text-anchor="start">Clientes e veículos</text>
+<rect x="40" y="130" width="720" height="620" rx="10" fill="#ffffff" stroke="#b5b5b5" stroke-width="1"/>
+<rect x="60" y="150" width="680" height="38" rx="5" fill="#ffffff" stroke="#b5b5b5" stroke-width="1"/>
+<text x="72" y="174.0" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#808080" text-anchor="start">Buscar por nome, telefone ou placa</text>
+<text x="60" y="222" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#333333" text-anchor="start">Cliente</text>
+<text x="290" y="222" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#333333" text-anchor="start">Telefone</text>
+<text x="440" y="222" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#333333" text-anchor="start">Veículos</text>
+<line x1="60" y1="234" x2="740" y2="234" stroke="#b5b5b5" stroke-width="1"/>
+<text x="60" y="262" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#333333" text-anchor="start">Fernanda Costa</text>
+<text x="60" y="280" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#808080" text-anchor="start">456.789.012-49</text>
+<text x="290" y="262" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#333333" text-anchor="start">(11) 98888-1004</text>
+<rect x="440" y="247" width="128" height="22" rx="11" fill="#e2e2e2" stroke="#b5b5b5" stroke-width="1"/>
+<text x="504.0" y="262" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#333333" text-anchor="middle">ZXC4V56 · Grande</text>
+<rect x="574" y="247" width="135" height="22" rx="11" fill="#e2e2e2" stroke="#b5b5b5" stroke-width="1"/>
+<text x="641.5" y="262" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#333333" text-anchor="middle">BNM5K67 · Pequeno</text>
+<line x1="60" y1="294" x2="740" y2="294" stroke="#e2e2e2" stroke-width="1"/>
+<text x="60" y="318" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#333333" text-anchor="start">João Silva</text>
+<text x="60" y="336" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#808080" text-anchor="start">123.456.789-09</text>
+<text x="290" y="318" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#333333" text-anchor="start">(11) 98888-1001</text>
+<rect x="440" y="303" width="121" height="22" rx="11" fill="#e2e2e2" stroke="#b5b5b5" stroke-width="1"/>
+<text x="500.5" y="318" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#333333" text-anchor="middle">ABC1D23 · Médio</text>
+<line x1="60" y1="350" x2="740" y2="350" stroke="#e2e2e2" stroke-width="1"/>
+<text x="60" y="374" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#333333" text-anchor="start">Maria Souza</text>
+<text x="60" y="392" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#808080" text-anchor="start">234.567.890-92</text>
+<text x="290" y="374" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#333333" text-anchor="start">(11) 98888-1002</text>
+<rect x="440" y="359" width="135" height="22" rx="11" fill="#e2e2e2" stroke="#b5b5b5" stroke-width="1"/>
+<text x="507.5" y="374" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#333333" text-anchor="middle">QWE2R34 · Pequeno</text>
+<line x1="60" y1="406" x2="740" y2="406" stroke="#e2e2e2" stroke-width="1"/>
+<text x="60" y="430" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#333333" text-anchor="start">Paulo Mendes</text>
+<text x="290" y="430" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#333333" text-anchor="start">(11) 98888-1005</text>
+<rect x="440" y="415" width="121" height="22" rx="11" fill="#e2e2e2" stroke="#b5b5b5" stroke-width="1"/>
+<text x="500.5" y="430" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#333333" text-anchor="middle">JKL6M78 · Médio</text>
+<line x1="60" y1="462" x2="740" y2="462" stroke="#e2e2e2" stroke-width="1"/>
+<text x="60" y="486" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#333333" text-anchor="start">Roberto Lima</text>
+<text x="60" y="504" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#808080" text-anchor="start">345.678.901-75</text>
+<text x="290" y="486" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#333333" text-anchor="start">(11) 98888-1003</text>
+<rect x="440" y="471" width="128" height="22" rx="11" fill="#e2e2e2" stroke="#b5b5b5" stroke-width="1"/>
+<text x="504.0" y="486" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#333333" text-anchor="middle">RTY3U45 · Grande</text>
+<line x1="60" y1="518" x2="740" y2="518" stroke="#e2e2e2" stroke-width="1"/>
+<rect x="790" y="130" width="450" height="520" rx="10" fill="#ffffff" stroke="#b5b5b5" stroke-width="1"/>
+<text x="810" y="165" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="#333333" text-anchor="start">Novo cliente</text>
+<text x="810" y="192" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#808080" text-anchor="start">Nome</text>
+<rect x="810" y="200" width="410" height="38" rx="5" fill="#ffffff" stroke="#b5b5b5" stroke-width="1"/>
+<text x="810" y="260" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#808080" text-anchor="start">Telefone</text>
+<rect x="810" y="268" width="200" height="38" rx="5" fill="#ffffff" stroke="#b5b5b5" stroke-width="1"/>
+<text x="822" y="292.0" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#808080" text-anchor="start">(11) 99999-9999</text>
+<text x="1020" y="260" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#808080" text-anchor="start">CPF (opcional)</text>
+<rect x="1020" y="268" width="200" height="38" rx="5" fill="#ffffff" stroke="#b5b5b5" stroke-width="1"/>
+<text x="1032" y="292.0" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#808080" text-anchor="start">000.000.000-00</text>
+<line x1="810" y1="330" x2="1220" y2="330" stroke="#b5b5b5" stroke-width="1"/>
+<text x="810" y="356" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#808080" text-anchor="start">VEÍCULO</text>
+<text x="810" y="382" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#808080" text-anchor="start">Placa</text>
+<rect x="810" y="390" width="130" height="38" rx="5" fill="#ffffff" stroke="#b5b5b5" stroke-width="1"/>
+<text x="950" y="382" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#808080" text-anchor="start">Modelo</text>
+<rect x="950" y="390" width="270" height="38" rx="5" fill="#ffffff" stroke="#b5b5b5" stroke-width="1"/>
+<text x="810" y="450" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#808080" text-anchor="start">Porte</text>
+<rect x="810" y="458" width="410" height="38" rx="5" fill="#ffffff" stroke="#b5b5b5" stroke-width="1"/>
+<text x="822" y="482.0" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#808080" text-anchor="start">Médio (sedã)</text>
+<path d="M1194 474.0 l6 6 l6 -6" stroke="#808080" stroke-width="2" fill="none"/>
+<rect x="810" y="520" width="410" height="42" rx="6" fill="#4a4a4a" stroke="#4a4a4a" stroke-width="1"/>
+<text x="1015.0" y="545.9" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Salvar</text>
+<text x="1015" y="595" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#808080" text-anchor="middle">Cadastra o cliente e o primeiro veículo</text>
+</svg>

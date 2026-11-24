@@ -1,0 +1,89 @@
+:root {
+    --lf-primaria: #0b6e8a;
+    --lf-primaria-escura: #08546a;
+    --lf-fundo: #f4f6f8;
+}
+
+body {
+    background: var(--lf-fundo);
+}
+
+.lf-navbar {
+    background: var(--lf-primaria);
+}
+
+.lf-navbar .nav-link.active {
+    font-weight: 600;
+    border-bottom: 2px solid #fff;
+}
+
+.btn-lf {
+    background: var(--lf-primaria);
+    border-color: var(--lf-primaria);
+    color: #fff;
+}
+
+.btn-lf:hover,
+.btn-lf:focus {
+    background: var(--lf-primaria-escura);
+    border-color: var(--lf-primaria-escura);
+    color: #fff;
+}
+
+/* Fila do dia */
+.lf-coluna {
+    background: #e9edf1;
+    border-radius: .75rem;
+    padding: .75rem;
+    min-height: 140px;
+}
+
+.lf-coluna h2 {
+    font-size: .95rem;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    margin-bottom: .75rem;
+}
+
+.lf-card-os {
+    border: 0;
+    border-left: 4px solid var(--lf-cor, #6c757d);
+    border-radius: .5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .06);
+}
+
+.lf-card-os + .lf-card-os {
+    margin-top: .6rem;
+}
+
+.lf-placa {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-weight: 700;
+    letter-spacing: .05em;
+}
+
+/* Nova OS */
+.lf-servico {
+    cursor: pointer;
+}
+
+.lf-servico:has(input:checked) {
+    border-color: var(--lf-primaria);
+    background: #e8f4f7;
+}
+
+.lf-resumo {
+    position: sticky;
+    top: 1rem;
+}
+
+/* Login */
+.lf-login {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--lf-primaria) 0%, #0f3d4c 100%);
+}
+
+/* Campos com texto em maiúsculas (placa): o exemplo do campo fica normal */
+.text-uppercase::placeholder {
+    text-transform: none;
+}

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800">
+<rect width="1280" height="800" fill="#f2f2f2"/>
+<rect x="0" y="0" width="1280" height="60" rx="0" fill="#4a4a4a" stroke="#4a4a4a" stroke-width="1"/>
+<circle cx="36" cy="30" r="12" fill="#ffffff" stroke="#ffffff"/>
+<text x="56" y="36" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="start">LavaFlow</text>
+<text x="200" y="36" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" fill="#ffffff" text-anchor="start">Fila do dia</text>
+<text x="316" y="36" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" fill="#ffffff" text-anchor="start">Nova OS</text>
+<text x="416" y="36" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" fill="#ffffff" text-anchor="start">Clientes</text>
+<text x="518" y="36" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="start">Caixa</text>
+<line x1="518" y1="46" x2="560" y2="46" stroke="#ffffff" stroke-width="2"/>
+<text x="1170" y="36" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#ffffff" text-anchor="end">Ana (Atendente)</text>
+<rect x="1190" y="17" width="64" height="26" rx="5" fill="#4a4a4a" stroke="#ffffff" stroke-width="1"/>
+<text x="1222" y="35" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#ffffff" text-anchor="middle">Sair</text>
+<text x="40" y="108" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="bold" fill="#333333" text-anchor="start">Caixa do dia</text>
+<rect x="1070" y="84" width="170" height="38" rx="5" fill="#ffffff" stroke="#b5b5b5" stroke-width="1"/>
+<text x="1082" y="108.0" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#808080" text-anchor="start">17/11/2026</text>
+<rect x="40" y="140" width="386" height="100" rx="10" fill="#ffffff" stroke="#b5b5b5" stroke-width="1"/>
+<text x="60" y="175" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#808080" text-anchor="start">Dinheiro</text>
+<text x="60" y="214" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="bold" fill="#333333" text-anchor="start">R$ 100,00</text>
+<rect x="446" y="140" width="386" height="100" rx="10" fill="#ffffff" stroke="#b5b5b5" stroke-width="1"/>
+<text x="466" y="175" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#808080" text-anchor="start">PIX</text>
+<text x="466" y="214" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="bold" fill="#333333" text-anchor="start">R$ 35,00</text>
+<rect x="852" y="140" width="386" height="100" rx="10" fill="#ffffff" stroke="#b5b5b5" stroke-width="1"/>
+<text x="872" y="175" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#808080" text-anchor="start">Cartão</text>
+<text x="872" y="214" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="bold" fill="#333333" text-anchor="start">R$ 0,00</text>
+<rect x="40" y="265" width="590" height="220" rx="10" fill="#ffffff" stroke="#b5b5b5" stroke-width="1"/>
+<text x="60" y="300" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#808080" text-anchor="start">TOTAL CALCULADO PELO SISTEMA</text>
+<text x="60" y="365" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="bold" fill="#333333" text-anchor="start">R$ 135,00</text>
+<text x="60" y="400" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#808080" text-anchor="start">3 pagamentos registrados</text>
+<rect x="650" y="265" width="590" height="220" rx="10" fill="#ffffff" stroke="#b5b5b5" stroke-width="1"/>
+<text x="670" y="300" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#808080" text-anchor="start">FECHAR CAIXA</text>
+<text x="670" y="337" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#808080" text-anchor="start">Valor contado (R$)</text>
+<rect x="670" y="345" width="550" height="38" rx="5" fill="#ffffff" stroke="#b5b5b5" stroke-width="1"/>
+<rect x="670" y="405" width="550" height="42" rx="6" fill="#4a4a4a" stroke="#4a4a4a" stroke-width="1"/>
+<text x="945.0" y="430.9" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Fechar caixa</text>
+<rect x="40" y="510" width="1200" height="110" rx="10" fill="#e2e2e2" stroke="#b5b5b5" stroke-width="1" stroke-dasharray="6 4"/>
+<text x="60" y="545" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#333333" text-anchor="start">Depois de fechado:</text>
+<text x="60" y="575" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#333333" text-anchor="start">Responsável: Ana Paula Rocha   ·   Valor contado: R$ 130,00   ·   Diferença:</text>
+<rect x="512" y="559" width="79" height="22" rx="11" fill="#4a4a4a" stroke="#4a4a4a" stroke-width="1"/>
+<text x="551.5" y="574" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">- R$ 5,00</text>
+<text x="60" y="602" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#808080" text-anchor="start">Pagamentos deste dia ficam bloqueados após o fechamento.</text>
+</svg>
