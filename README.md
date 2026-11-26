@@ -59,3 +59,19 @@ A API recebe os dados em JSON, valida, salva ou consulta no banco e devolve a re
 | POST | /api/pagamentos/ | Registrar pagamento |
 | GET / POST | /api/caixa/ | Resumo e fechamento do caixa |
 | GET | /api/relatorios/comissoes/ | Comissões por funcionário |
+
+
+## Testes automatizados
+Os testes verificam as principais regras de negócio e a API. Antes da primeira execução, dê permissão ao usuário do banco (no pgAdmin):
+```sql
+ALTER ROLE lavaflow_app CREATEDB;
+```
+Depois, rode no terminal:
+```
+python manage.py test --testrunner core.test_runner.LavaFlowTestRunner
+```
+
+## Status do projeto
+Funcionalidades concluídas: login com perfis, clientes e veículos, ordens de serviço com preço por porte, fila do dia (computador e celular), pacotes mensais, pagamentos com comissão automática, fechamento de caixa, API e testes automatizados.
+
+Trabalhos futuros: telas de relatórios, agendamento, venda de pacotes e cadastro de serviços e funcionários, e autenticação na API.
